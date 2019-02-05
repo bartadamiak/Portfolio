@@ -61,18 +61,67 @@ body {
     background: $yellow;
     width: 100%;
     height: 520px;
-    .background {
-        width: 100%;
+    color: $grey;
+    .section-first-main {
         display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
-        img {
-            width: 60%;
-            height: 60%;
-            opacity: 0.05;
+        align-items: center;
+        align-content: stretch;
+        div {
+            margin: 180px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .top {
+                font-size: 55px;
+                text-transform: uppercase
+            }
+            .bottom {
+                margin-top: 20px;
+                font-size: 30px;
+            }
+        }
+        i {
+            margin-top: 20px;
+            display: inline-block;
+            cursor: pointer;
+            animation-name: scroll;
+            animation-duration: 2s;
+            animation-iteration-count: infinite
+            
         }
     }
     
+    // .background {
+    //     z-index: 2;
+    //     background: url('../images/deskop.jpg');
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: center;
+    //     height: 100%;
+    //     // img {
+    //     //     width: 60%;
+    //     //     height: 60%;
+    //     //     opacity: 0.05;
+    //     // }
+    // }
+    
 }
+////// Animation \\\\\
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5
+    }
+
+}
+
+
 ////////////////// Portfolio \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .portfolio {
@@ -95,9 +144,11 @@ body {
             width: 100%;
             height: 100%;
             cursor: pointer;
+            
         }
         img:hover {
             opacity: 0.5;
+           
         }
         a {
             color: inherit;
@@ -106,10 +157,14 @@ body {
             cursor: pointer;
             text-align: center
         }
+       
         p {
             display: inline-block;
             margin-left: 128.44px;
+           
         }
+      
+        
     }
 
 }

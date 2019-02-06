@@ -51,10 +51,15 @@ body {
             outline: none;
             text-decoration: none;
             color: inherit;
+            padding-bottom: 30px;
+            
         }
         i {
             margin: 5px;
+            position: relative;
+            top: -5px;
         }
+      
     }
 }
 
@@ -73,10 +78,13 @@ body {
         align-items: center;
         align-content: stretch;
         .about {
-            width: 50%;
-            padding-right: 150px;
-            padding-top: 100px;
+           
+            margin-left: 50px;
+            margin-top: 20px;
+            width: 100%;
+            padding: 100px 200px;
             text-align: center;
+            line-height: 30px;
             p {
                 margin-top: 20px;
             }
@@ -131,7 +139,7 @@ body {
     div {
         width: 30%;
         height: 215.75px;
-        border: 1px dotted $yellow;
+        // border: 1px dotted $yellow;
         margin: 10px;
         color: $yellow;
         transition: 0.5s;
@@ -140,6 +148,8 @@ body {
             width: 100%;
             height: 100%;
             cursor: pointer;
+            border: 1px dotted $yellow;
+            border-radius: 5%;
             
         }
         img:hover {
@@ -169,6 +179,89 @@ body {
 
 .summary {
     background: $yellow;
-    height: 200px;
+    height: 150px;
     width: 100%;
 }
+
+.summary-main {
+    width: 100%;
+    color: $grey;
+    display: flex;
+    justify-content: space-around;
+    #mail {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #linkedin {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #github {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        font-size: 70%;
+        margin-top: 10px;
+    }
+    
+}
+// .summary-main {
+//     form {
+//         padding-top: 30px;
+//         height: 250px;
+//         display: flex;
+//         flex-direction: column;
+//         flex-wrap: wrap;
+//         input {
+//             width: 300px;
+//             height: 50px;
+//             margin: 20px;
+//             background: $grey;
+//             color: $yellow;
+//             outline: none;
+//             border: 0.5px dotted $yellow;
+//             border-radius: 5%;
+//             padding: 10px;
+//         }
+//         textarea {
+//             padding: 10px;
+//             margin: 20px;
+//             height: 140px;
+//             width: 800px;
+//             background: $grey;
+//             color: $yellow;
+//             outline: none;
+//             border: 0.5px dotted $yellow;
+//             border-radius: 5%
+//         }
+//         button {
+//             width: 800px;
+//             height: 50px;
+//             position: relative;
+//             left: -820px;
+//             top: 170px;
+//             border-radius: 5%;
+//             background: none;
+//             color: $grey;
+//             border: 0.5px solid $grey;
+//             outline: none;
+//             cursor: pointer;
+//         }
+//     }
+   
+// }

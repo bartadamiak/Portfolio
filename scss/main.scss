@@ -79,9 +79,7 @@ body {
 }
 
 .section-first {
-    background: $yellow;
-    background-size: 50%;
-    
+    background: linear-gradient(to left, $yellow 70%, $blue 30%);    
     width: 100%;
     height: 520px;
     color: $grey;
@@ -90,14 +88,14 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         align-content: stretch;
         .about {
            
             margin-left: 50px;
             margin-top: 20px;
-            width: 100%;
+            width: 70%;
             padding: 100px 200px;
             text-align: center;
             line-height: 30px;
@@ -171,6 +169,7 @@ body {
         }
         img:hover {
             opacity: 0.5;
+            border: 1px dotted $blue;
            
         }
         a {
@@ -179,6 +178,9 @@ body {
         i {
             cursor: pointer;
             text-align: center
+        }
+        i:hover {
+            color: $blue;
         }
        
         p {
@@ -196,13 +198,11 @@ body {
 ////////////////////////// Summary \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .summary {
-    background: rgb(0,173,171);
+    // background: rgb(0,173,171);
+    background: linear-gradient(to left, $blue 70%, $yellow 30%);  
     height: 150px;
     width: 100%;
     border-bottom: 1px solid $yellow;
-}
-#contact {
-    background: rgb(0,173,171);
 }
 
 .summary-main {

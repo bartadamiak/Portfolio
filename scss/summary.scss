@@ -1,0 +1,49 @@
+////////////////////////// Summary \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+.summary {
+    background: rgb(0,173,171);
+    height: 150px;
+    width: 100%;
+}
+#contact {
+    background: rgb(0,173,171);
+}
+
+.summary-main {
+    width: 100%;
+    color: $grey;
+    display: flex;
+    justify-content: space-around;
+    #mail {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #linkedin {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    #github {
+        text-align: center;
+        width: 33.33333%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+        font-size: 70%;
+        margin-top: 10px;
+    }
+    
+    
+}

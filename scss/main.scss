@@ -1,5 +1,5 @@
 @import "grid.scss";
-// @import "header.scss";
+// @import "scss/header.scss";
 // @import "firstsection";
 // @import "portfolio.scss";
 // @import "summary.scss";
@@ -7,7 +7,7 @@
 
 $yellow: rgb(255,190,0);
 $grey: rgb(38,38,38);
-$blue: rgb(0,173,171);
+$blue: white;
 
 * {
     margin: 0;
@@ -36,9 +36,14 @@ body {
     text-transform: uppercase;
 }
 .header-name {
-    cursor: default
+    cursor: default;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 .header-main {
+    
     div {
         width: 33.3333333%;
     }
@@ -55,7 +60,7 @@ body {
             }            
         }
         div:hover {
-            color: $blue;
+            color: white;
         }
 
     }
@@ -82,12 +87,28 @@ body {
     }
 }
 
-@media (max-width: 500px) {
-    .header-main {
-    width: 100%;
-    display: flex;    
-    justify-content: flex-start;
+@media (max-width: 630px) {
+    .header {
+        width: 100%;
+        position: relative;
+        .header-main {
+            width: 100%;
+            justify-content: space-between;
+            padding: 0 10px;
+            .header-name {
+                display: none;
+            }
+            .header-menu {
+                justify-content: space-between;
+                div {
+                    padding: 0 5px;
+                }
+                
+            }
+        }
+        
     }
+
 }
 
 
@@ -96,46 +117,48 @@ body {
 .section-first {
     background: $yellow; 
     width: 100%;
-    height: 520px;
+    height: 100%;
     color: $grey;
     border: 1px solid $yellow;
     transition: 1s;
     .section-first-main {
+        width: 100%;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
+        padding: 70px 0;
         
         .about {
-            width: 50%;
-            margin-left: 50px;
-            margin-top: 20px;
-            width: 70%;
-            padding: 100px 200px;
-            text-align: center;
+            width: 60%;
+            text-align: left;
             line-height: 30px;
+            padding: 0 50px;
             cursor: default;
+            span {
+                display: block;
+                color: grey;
+            }
+            .content {
+                padding-left: 50px;
+            }
             p {
-                margin-top: 20px;
+               display: inline; 
+            }
+            .about-text {
+                text-align: center;
+                font-size: 70%;
             }
         }
         .pictures {
-            width: 50%;
+            width: 40%;
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             // position: relative;
         }
-        i {
-            margin-top: 20px;
-            display: inline-block;
-            cursor: pointer;
-            animation-name: scroll;
-            animation-duration: 2s;
-            animation-iteration-count: infinite
-            
-        }
+        
         .square {
             width: 100px;
             height: 100px;
@@ -155,15 +178,7 @@ body {
                 transition: 2s;
             }
         }
-        // .square:nth-child(1) {
-        //     top: -200px;
-        //     left: 30px;
-        // }
-        // .square:nth-child(2) {
-        //     position: absolute;
-        //     top: -100px;
-        //     left: 130px;
-        // }
+    
         .square:nth-child(3),.square:nth-child(4),.square:nth-child(9) {
             background: $grey;
         }
@@ -191,21 +206,47 @@ body {
     
 }
 
+.dark-blue {
+    color: darkblue;
+    text-decoration: none;
+}
+.light-blue {
+    color: lightseagreen;
+}
+.salmon {
+    color: purple;
+}
 
-////// Animation \\\\\
-@keyframes scroll {
-    0% {
-        opacity: 1;
+@media (max-width: 630px) {
+    .section-first {
+        height: 100%;
+        .section-first-main {
+            flex-direction: column;
+            .pictures {
+                width: 100%;
+                flex-direction: row;
+                .empty {
+                    display: none;
+                }
+            }
+            .about {
+                margin-top: 20px;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .about-js {
+                    display: none;
+                }
+            }
+        }
     }
-    100% {
-        opacity: 0.5
-    }
-
 }
 
 ////////////////// Portfolio \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .portfolio {
+    width: 100%;
     background: $grey;
     height: 600px;
     display: flex;
@@ -213,11 +254,11 @@ body {
     flex-wrap: wrap;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-bottom: 1px solid $yellow;
+    
     div {
         width: 30%;
         height: 215.75px;
-        // border: 1px dotted $yellow;
+        
         margin: 10px;
         color: $yellow;
         transition: 0.5s;
@@ -283,20 +324,37 @@ body {
     }
   }
 
+  @media (max-width: 630px) {
+      .portfolio {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 100%;
+          div {
+            width: 80%;
+            height: 120%;
+            p {
+                display: none;
+            }
+          }
+      }
+  }
+
 ////////////////////////// Summary \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 .summary {
-    // background: rgb(0,173,171);
+    
     background: linear-gradient(to left, $blue 70%, $yellow 30%);  
-    height: 150px;
-    width: 100%;
-    border-bottom: 1px solid $yellow;
+    height: 100%;
+    // width: 100%;
+    
 }
 
 .summary-main {
     width: 100%;
     color: $grey;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     #mail {
         text-align: center;
@@ -330,8 +388,20 @@ body {
         margin-top: 10px;
     }
     
+   
+    
     
 }
+
+@media (max-width: 630px) {
+    .summary-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: $yellow;
+    }
+}
+
 
 //////////////// Footer \\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
@@ -340,6 +410,9 @@ body {
     height: 50px;
     background: $grey;
     color: $yellow;
+    .footer-main {
+        width: 100%;
+    }
     .footer-text {
         width: 100%;
         height: 100%;
@@ -348,10 +421,18 @@ body {
     }
 }
 
-
-
-@media (max-width: 500px) {
-
+@media (max-width: 630px) {
+    .footer-main {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .footer-text {
+            text-align: center;
+        }
+    }
 }
+////////////////////////// Media \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
 
 

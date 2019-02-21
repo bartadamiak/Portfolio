@@ -1,3 +1,6 @@
+@import 'main.scss';
+////////////// header \\\\\\\\\\\\\\\\\\\\\
+
 .header {
     z-index: 333;
     position: fixed;
@@ -9,7 +12,11 @@
     text-transform: uppercase;
 }
 .header-name {
-    cursor: default
+    cursor: default;
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
 }
 .header-main {
     div {
@@ -22,7 +29,15 @@
         justify-content: center;
         div {
             cursor: pointer;
+            a {
+                color: inherit;
+                text-decoration: none;
+            }            
         }
+        div:hover {
+            color: white;
+        }
+
     }
     .header-icons {
         display: flex;
@@ -40,6 +55,20 @@
             position: relative;
             top: -5px;
         }
+        i:hover {
+            color: $blue;
+        }
       
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        width: 100%;
+    }
+    .header-main {
+    width: 100%;
+    display: flex;    
+    justify-content: flex-start;
     }
 }

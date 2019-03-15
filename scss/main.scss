@@ -248,7 +248,7 @@ body {
 .portfolio {
     width: 100%;
     background: $grey;
-    height: 600px;
+    height: 900px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -414,7 +414,8 @@ body {
         width: 100%;
     }
     .footer-text {
-        width: 100%;
+        text-align: center;
+       
         height: 100%;
         padding-top: 10px;
         cursor: default;
